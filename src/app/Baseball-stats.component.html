@@ -1,0 +1,18 @@
+<h1>Baseball Stats</h1>
+<ng-container *ngIf="statusMsg !== ''">
+  <h3>Current status</h3>
+  <p >{{ statusMsg }}</p>
+  <button (click)="clearStatusMsg()">Clear status</button>
+</ng-container>
+
+<p ngFor="let player of playerList" ngFor ="let power of playerList" *ngFor="let speed of playerList">
+  {{ player }} {{power}}  {{speed}}
+
+</p>
+
+<p *ngIf="playerList.length === 0">You have no players tracked, click the button to add a player</p>
+<button (click)="addPlayer()">Add player</button>
+<button (click)="removePlayer()" [disabled]="playerList.length === 0">Remove player</button>
+<p *ngIf="playerList.length > 3">
+  You have more than 3 players tracked
+</p>
