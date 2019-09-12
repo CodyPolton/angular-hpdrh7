@@ -13,6 +13,6 @@
 <p *ngIf="playerList.length === 0">You have no players tracked, click the button to add a player</p>
 <button (click)="addPlayer()">Add player</button>
 <button (click)="removePlayer()" [disabled]="playerList.length === 0">Remove player</button>
-<p *ngIf="playerList.length > 3">
+<p *ngIf="playerList.length > 9">
   You have more than 3 players tracked
 </p>
